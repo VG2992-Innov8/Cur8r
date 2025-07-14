@@ -1,0 +1,45 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Welcome"
+        name: "welcome"
+        file: "content/welcome.md"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+
+      - label: "About the Airbnb"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Amenities", name: "amenities", widget: "list" }
+
+      - label: "About the Hosts"
+        name: "hosts"
+        file: "content/hosts.md"
+        fields:
+          - { label: "Host Info", name: "info", widget: "text" }
+
+      - label: "Things to Do"
+        name: "things"
+        file: "content/things.md"
+        fields:
+          - { label: "Activities", name: "activities", widget: "list" }
+          - { label: "Food", name: "food", widget: "list" }
+
+      - label: "House Rules"
+        name: "rules"
+        file: "content/rules.md"
+        fields:
+          - { label: "Rules List", name: "rules", widget: "list" }
+          - { label: "Extra Info", name: "extra", widget: "text" }
