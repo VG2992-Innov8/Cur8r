@@ -8,9 +8,14 @@ public_folder: "/images/uploads"
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "content"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "content/index.html"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
