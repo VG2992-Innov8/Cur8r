@@ -1,24 +1,19 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: VG2992-Innov8/Cur8r  # your GitHub repo full name
   branch: main
+  auth_scope: repo
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
   - name: "pages"
-    label: "Site Pages"
-    folder: "content/pages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: "Page Title"
-        name: "title"
-        widget: "string"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
-      - label: "Image"
-        name: "image"
-        widget: "image"
-        required: false
+    label: "Pages"
+    files:
+      - file: "content/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
