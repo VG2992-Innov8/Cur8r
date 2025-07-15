@@ -1,5 +1,5 @@
 ---
-title: About the Airbnb
+title: About the Propery
 image: /images/uploads/placeholder.jpg
 ---
 
