@@ -7,11 +7,18 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "pages"
-    label: "Pages"
-    files:
-      - file: "content/index.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+    label: "Site Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Page Title"
+        name: "title"
+        widget: "string"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
